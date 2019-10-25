@@ -4,9 +4,616 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/index.css"
+      media="screen"
+    />
+
     <title>My portfolio</title>
   </head>
   <body>
-    <h1>Test</h1>
+    <header class="hero" id="hero">
+      <div class="hero__slides">
+        <img src="images/slider2.jpg" style="width: 100%;" alt="photo_me" />
+        <div id="hero__text" class="hero__text">
+          <div id="hero__text--title">WELCOME TO MY PAGE</div>
+          <div id="hero__text--name">I am Paulina Aniśkiewicz</div>
+          <div id="hero__text--profession">Junior Front-End Developer</div>
+        </div>
+        <div class="hero__epiloque">
+          <button
+            class="hero__button"
+            type="submit"
+            onclick="window.location.href = '#nav'"
+          >
+            START NOW
+          </button>
+          <figure class="hero__epiloque--me">
+            <img src="images/slider1.jpg" alt="Me" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="hero__slides">
+        <img
+          src="images/slider2.jpg"
+          style="width: 100%;"
+          alt="photo_keywords"
+        />
+        <div class="hero__logos">
+          <figure class="hero__logos--js">
+            <img src="images/javascript-seeklogo.com.svg" alt="JavaScript" />
+            <figcaption class="hero__logos--figcaption">JS</figcaption>
+          </figure>
+          <figure class="hero__logos--css3">
+            <img src="images/css3-seeklogo.com.png" alt="CSS3" />
+            <figcaption class="hero__logos--figcaption">CSS3</figcaption>
+          </figure>
+          <figure class="hero__logos--html5">
+            <img src="images/html5-without-wordmark-color.svg" alt="HTML5" />
+            <figcaption class="hero__logos--figcaption">HTML5</figcaption>
+          </figure>
+          <figure class="hero__logos--react">
+            <img src="images/react-seeklogo.com.svg" alt="React" />
+            <figcaption class="hero__logos--figcaption">React</figcaption>
+          </figure>
+          <figure class="hero__logos--redux">
+            <img src="images/redux-seeklogo.com.svg" alt="Redux" />
+            <figcaption class="hero__logos--figcaption">Redux</figcaption>
+          </figure>
+          <figure class="hero__logos--vscode">
+            <img
+              src="images/visual-studio-code-seeklogo.com.svg"
+              alt="VS Code"
+            />
+            <figcaption class="hero__logos--figcaption">VS code</figcaption>
+          </figure>
+          <figure class="hero__logos--firebase">
+            <img src="images/firebase-seeklogo.com.svg" alt="Firebase" />
+            <figcaption class="hero__logos--figcaption">Firebase</figcaption>
+          </figure>
+          <figure class="hero__logos--git">
+            <img src="images/git-seeklogo.com.svg" alt="GIT" />
+            <figcaption class="hero__logos--figcaption">GIT</figcaption>
+          </figure>
+          <button
+            class="hero__button"
+            type="submit"
+            onclick="window.location.href = '#nav'"
+          >
+            START NOW
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__slides">
+        <img
+          src="images/slider2.jpg"
+          style="width: 100%;"
+          alt="photo_other_interests"
+        />
+        <div class="hero__keywords">
+          <div class="hero__keywords--matlab">Matlab</div>
+          <div class="hero__keywords--systems">Linux Windows macOS</div>
+          <div class="hero__keywords--python">Python</div>
+          <div class="hero__keywords--num">Numerical modelling</div>
+          <div class="hero__keywords--roms">ROMS model</div>
+          <div class="hero__keywords--wrf">WRF model</div>
+          <div class="hero__keywords--climate">Climate change Oceanography</div>
+          <div class="hero__keywords--arctic">Arctic</div>
+          <button
+            class="hero__button"
+            type="submit"
+            onclick="window.location.href = '#nav'"
+          >
+            START NOW
+          </button>
+        </div>
+      </div>
+      <div class="hero__dots" style="text-align: center;">
+        <span class="hero__dots--dot" onclick="currentSlide(1)"></span>
+        <span class="hero__dots--dot" onclick="currentSlide(2)"></span>
+        <span class="hero__dots--dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div class="hero__arrows">
+        <a class="hero__arrows--prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="hero__arrows--next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </header>
+
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a class="active" href="#hero">Home</a></li>
+        <li><a href="#aboutme">About me</a></li>
+        <li><a href="#exp">Experience and Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#footer">Contact</a></li>
+        <a href="javascript:void(0);" class="icon" onclick="myBurger()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </ul>
+    </nav> 
+
+    <main id="aboutme">
+      <div class="aboutme__text">
+        <div class="aboutme__text--h">
+          <h1>About me</h1>
+        </div>
+        <p class="aboutme__text--p">
+          <cite
+            >Remember your dreams and fight for them. You must know what you
+            want from life. "There is just one thing that makes your dream
+            become impossible: the fear of failure"</cite
+          >
+          (Paulo Coelho).
+        </p>
+        <p>
+          I am Junior Front-end Developer with 8 months intensive InfoShare
+          Academy course. I passed an exam and accomplished the course obtaining
+          a certificate. I possess knowledge of JavaScript and HTML5/CSS3,
+          ReactJS and Redux. I am familiar with GIT and Scrum. I am looking for
+          my first full-time job as the Front-end Developer. I have the ability
+          to work in different operational systems (Windows, Linux, macOS). I am
+          self-motivated, hard-working person, who wants to start working as the
+          Front-end developer.
+        </p>
+
+        <p class="aboutme__text--p">
+          I have ability to use English as a major communication language. Since
+          my research career started I have presented my work at 11
+          International Conferences and 15 National Conferences. I have also
+          strong technical and merit report writing skill (in English and
+          Polish). My desire of self-improvement and hard-working personality
+          motivated me to take some additional programming courses (Python,
+          Machine Learning). Finally I have decided to start my adventure as a
+          Front-end Developer. After 8 month intensive course I feel ready for
+          my first job in programming.
+        </p>
+
+        <p class="aboutme__text--p">
+          My programming skills, good work organization (both in team and
+          individual tasks) and analytical thinking will help me to improve my
+          experience. Moreover, these skills I gained in my previous job will be
+          very helpful when communicating with other team members. I also have
+          experience with teaching. My strong didactic skills may be useful in
+          the future. Remember that the job as an programmer is not only a job,
+          but also it is a passion.
+        </p>
+
+        <p>
+          As Confucius said:
+          <cite
+            >“Choose a job you love, and you will never have to work a day in
+            your life”.</cite
+          >
+        </p>
+      </div>
+    </main>
+    <section id="exp">
+      <div class="exp__title">
+        <h1>Experience and Education</h1>
+      </div>
+      <div class="timeline">
+        <div id="cd-timeline" class="cd-container">
+            <h2 class="timeline__h2">Experience</h2>
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Junior Front-End Developer course</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Infoshare academy
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>01.2019-08.2019</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                8 months intensive InfoShare Academy course. I passed an exam
+                and accomplished the course obtaining a certificate.
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>ReactJS</li>
+                <li>Redux</li>
+                <li>REST</li>
+                <li>AJAX</li>
+                <li>Firebase</li>
+                <li>GIT</li>
+                <li>Scrum</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Scientific Researcher (academic training)</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Institute of Marine Research
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>03.2017-04.2017</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                Numerical modelling in the Porsanger fjord by using ROMS model
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>Matlab</li>
+                <li>Linux</li>
+                <li>Bash</li>
+                <li>ROMS model</li>
+                <li>Statistical analysis</li>
+              </ul>
+              <p class="content-skills__title">Project description</p>
+              <ul class="content-skills">
+                <li>
+                  Hjort Scholar Award – Hjort Scholar by the Hjort Centre for
+                  Marine Ecosystem Dynamics, Bergen, Norway
+                  (www.hjortcentre.no). Recipients of Hjort Scholarships were
+                  gifted scientists whose research is deemed to promote
+                  scientific innovation and understanding of marine ecosystem
+                  dynamics.
+                </li>
+              </ul>
+              <p class="content-skills__title">Methodology</p>
+              <ul class="content-skills">
+                <li>
+                  In this project, I have used Regional Ocean Modeling System
+                  (ROMS) to simulate the circulation of the fjord waters. For
+                  detailed description of the model see www.myroms.org. ROMS is
+                  a free-surface, terrain-following, primitive equation model
+                  with potential temperature, salinity and an equation of state.
+                  It is used to predict water exchange.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Scientific Researcher (academic training)</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  University of Szczecin (remote work)
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>01.2017-04.2017</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                Post-processing and analyses of meteorological and hydrodynamic
+                data, comparing in situ data with numerical model results.
+              </p>
+              <p class="content-skills__about">
+                Collaboration with the Institute of Marine Research
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>Matlab</li>
+                <li>Linux</li>
+                <li>Bash</li>
+                <li>ROMS model</li>
+                <li>Statistical analysis</li>
+              </ul>
+              <p class="content-skills__title">Project description</p>
+              <ul class="content-skills">
+                <li>
+                  Application of in situ observations, high frequency radars,
+                  and ocean color, to study suspended matter, particulate
+                  carbon, and dissolved organic carbon fluxes in coastal waters
+                  of the Barents Sea, Polish-Norwegian Research Programme,
+                  Project ID: POL-NOR/201985/79
+                </li>
+              </ul>
+              <p class="content-skills__title">Methodology</p>
+              <ul class="content-skills">
+                <li>
+                  I have used the results from hydrodynamic numerical model ROMS
+                  and compared these results with in situ data. For the
+                  comparison of water temperature and water salinity I have done
+                  statistical analysis. I have compared water temperature data f
+                  using the Nortek Continental 190 kHz ADCP (www.nortek.no)
+                  deployed from a mooring.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Scientific Researcher</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  University of Szczecin
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>10.2014-12.2015</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                Field measurements (pre-storm and post-storm profiles along the
+                polish Baltic Sea Coast). The analysis of water currents in the
+                Southern Baltic, by using ADCP equipment and the comparison of
+                these data with hydrodynamic numerical models. the prediction of
+                morphological changes (XBeach model). The adaptation of wave
+                run-up formulas to the Baltic Sea coast
+              </p>
+              <p class="content-skills__about">
+                The collaboration with three additional Research Institutions
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>Matlab</li>
+                <li>Linux</li>
+                <li>Bash</li>
+                <li>ROMS model</li>
+                <li>Statistical analysis</li>
+              </ul>
+              <p class="content-skills__title">Project description</p>
+              <ul class="content-skills">
+                <li>
+                  SatBałtyk Project - Satellite Environment Control of Baltic
+                  Sea. Monitoring and prediction of the coastal changes
+                  supported by remote sensing and modelling (Project No.
+                  POIG.01.01.02-22-011/09, http://www.satbaltyk.pl/).
+                </li>
+              </ul>
+              <p class="content-skills__title">Methodology</p>
+              <ul class="content-skills">
+                <li>
+                  I have compared the post-storm profiles with the results from
+                  the Xbeach model. The results of each simulation were
+                  evaluated by juxtaposing pre-storm and post-storm profiles
+                  measured in-situ and post-storm profiles obtained from the
+                  simulation with the Brier Skill Score (BSS) as a criterion.
+                  BSS is commonly used statistic indicator for numerical model
+                  evaluation, especially for morphological changes.
+                </li>
+                <li>
+                  The analysis of water currents and temperature data were done
+                  by using the data from the ADCP equipment located 10 km far
+                  from the Dziwnów, at the Polish Baltic Sea Coast. I have
+                  calculated water currents at every 0.5 m depth from the
+                  surface, up to 10 m depth.
+                </li>
+                <li>
+                  The analysis of Statistical Methods to predict Beach
+                  Inundation was done by the validation of available wave run-up
+                  formulas with camera images and measurements made by GPS RTK
+                  along the profiles in the Polish Baltic Sea Coast.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Academic teacher</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  The Jacob of Paradies Univeristy in Gorzów Wielkopolski
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>10.2013-09.2014</b>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>Weather observer</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Institute of Meteorology and Water Management
+                  (apprenticeships)
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>04.2011 - 05.2011</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                Fieldwork
+              </p>
+            </div>
+          </div>
+
+          <p class="content-skills__about">
+            Weather research and analysis
+          </p>
+        </div>
+
+        <div id="cd-timeline" class="cd-container">
+          <h2 class="timeline__h2">Education</h2>
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>PhD Student</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Institute of Oceanology PAS in Sopot, Centre for Polar Studies
+                  at University of Silesia
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>10.2015-present</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                My work is about the influence of atmospheric and oceanic
+                conditions on physical processes in two arctic fjords, based on
+                the two numerical models: atmospheric WRF (Weather Research and
+                Forecasting Model) and hydrodynamic ROMS (Regional Ocean
+                Modeling System).
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>ROMS model</li>
+                <li>WRF model</li>
+                <li>Linux</li>
+                <li>MacOS</li>
+                <li>Bash</li>
+                <li>Matlab</li>
+                <li>ArcGIS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <div class="cd-timeline-content">
+              <h2>ERASMUS Student</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Universidade de Aveiro, Aveiro, Portugal
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  <b>07.2014</b>
+                </span>
+              </div>
+              <p class="content-skills__about">
+                Student at Lifelong Learning Programme Erasmus
+              </p>
+              <p class="content-skills__title">Technologies and tools</p>
+              <ul class="content-skills">
+                <li>ArcGIS</li>
+                <li>Hydrological modelling</li>
+                <li>Statistical analysis</li>
+              </ul>
+              <p class="content-skills__title">Project description</p>
+              <ul class="content-skills">
+                <li>
+                  MIRAME- Multi-Risk Assessment and Mitigation in Europe 
+                </li>
+              </ul>
+              <p class="content-skills__title">Methodology</p>
+              <ul class="content-skills">
+                <li>
+                  The analysis of flood risk prediction
+                </li>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture"></div>
+              <div class="cd-timeline-content">
+                <h2>ERASMUS Student</h2>
+                <div class="timeline-content-info">
+                  <span class="timeline-content-info-title">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    Università degli Studi di Siena, San Giovanni Valdarno, Italy
+                  </span>
+                  <span class="timeline-content-info-date">
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    <b>08.2013</b>
+                  </span>
+                </div>
+                <p class="content-skills__about">
+                  Student at Lifelong Learning Programme Erasmus
+                </p>
+                <p class="content-skills__title">Technologies and tools</p>
+                <ul class="content-skills">
+                  <li>ArcGIS</li>
+                  <li>Hydrological modelling</li>
+                  <li>Statistical analysis</li>
+                </ul>
+                <p class="content-skills__title">Project description</p>
+                <ul class="content-skills">
+                  <li>
+                    MIRAME- Multi-Risk Assessment and Mitigation in Europe 
+                  </li>
+                </ul>
+                <p class="content-skills__title">Methodology</p>
+                <ul class="content-skills">
+                  <li>
+                    The analysis of flood risk prediction
+                  </li>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="projects">
+      <h2>My projects</h2>
+      <div class="projects__blocks">
+        <form class="projects__blocks--first-website" action="https://github.com/paulina-ani/FirstWebsite" target="_blank">
+          <h4>First Website</h4>
+          <input id="first-website" type="submit" value="" />
+          <label for="first-website">First website preapred at the beggining of the course. Without any more advanced CSS styles (e.g. flex-box or grid) and without JavaScript</label>
+        </form>
+        <form class="projects__blocks--pokedex" action="https://github.com/paulina-ani/pokedex" target="_blank">
+          <h4>Pokedex</h4>
+          <input id="pokedex" type="submit" value="" />
+          <label for="pokedex">Created by using JavaScript, HTML, CSS and JSON</label>
+        </form>
+        <form class="projects__blocks--firebase-testing" action="https://github.com/paulina-ani/firebase-testing" target="_blank">
+          <h4>Firebase testing</h4>
+          <input id="firebase-testing" type="submit" value="" />
+          <label for="firebase-testing">Created by using JavaScript, HTML, CSS and Firebase</label>
+        </form>
+        <form class="projects__blocks--first-react-app" action="https://github.com/paulina-ani/first-react-app" target="_blank">
+          <h4>First react app</h4>
+          <input id="first-react-app" type="submit" value="" />
+          <label for="first-react-app">Created by using React</label>
+        </form>
+        <form class="projects__blocks--firebase-react-testing" action="https://github.com/paulina-ani/firebase-react-testing" target="_blank">
+          <h4>Firebase react testing</h4>
+          <input id="firebase-react-testing" type="submit" value="" />
+          <label for="firebase-react-testing">Created by using React and Firebase</label>
+        </form> 
+      </div>
+      <footer id="footer">
+          <div class="footer__contact">
+            <div class="footer__contact--header">
+                <h4>Contact me:</h4>
+            </div>
+              <div class="footer__contact--text">
+                <p><b>Mobile phone: </b>+48 600-037-992</p>
+                <p><b>Email: </b>aniskiewicz.paulina@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer__copyright">
+                <h4>&copy Copyright by Paulina Aniśkiewicz</h4>
+              </div>
+      </footer>
+    <button id="buttonTop" onclick="buttonUp()">
+      Top
+    </button>
+    <script src="js/index.js"></script>
+    <script src="https://use.fontawesome.com/4d74086fc6.js"></script>
   </body>
 </html>
